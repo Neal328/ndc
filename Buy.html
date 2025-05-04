@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoDrive - Billing</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-sans">
+
+  <header class="flex items-center justify-between bg-black px-8 py-4 fixed top-0 w-full z-50 border-b-2 border-white-700">
+    <div class="text-2xl font-bold"><a href="index.html">AutoDrive</a></div>
+    <nav>
+      <ul class="flex space-x-5 text-sm">
+        <li><a href="index.html"class="hover:text-gray-400">Home</a></li>
+        <li><a href="About us.html" class="hover:text-gray-400">About Us</a></li>
+        <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+        <li><a href="Showcase.html" class="hover:text-gray-400">Showcase</a></li>
+        <li><a href="new-cars.html" class="hover:text-gray-400">New Cars</a></li>
+        <li><a href="Buy.html" class="hover:text-gray-400">Buy</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <div class="flex">
+        <input type="text" placeholder="Search" class="rounded-l px-2 py-1 text-black" />
+        <button class="bg-white text-black px-3 py-1 rounded-r">Enter</button>
+      </div>
+      <a href="Sign Up.html" class="bg-white text-black px-2 py-2 rounded hover:text-gray-400">Sign Up</a>
+      <a href="Login Page.html" class="bg-white text-black px-2 py-2 rounded hover:text-gray-400">Login</a>
+    </div>
+  </header>
+
+  <main class="flex justify-center pt-40 px-4">
+    <div class="bg-white text-black rounded-lg shadow-lg w-full max-w-md p-6">
+      <h2 class="text-xl font-bold mb-4">Billing Information</h2>
+      <form class="space-y-4">
+
+        <input type="email" placeholder="Email"  class="w-full px-4 py-2 border border-gray-300 rounded" />
+
+        <input type="text" placeholder="Address"  class="w-full px-4 py-2 border border-gray-300 rounded" />
+
+        <div class="flex space-x-2">
+          <input type="text" placeholder="City" class="w-1/2 px-4 py-2 border border-gray-300 rounded" />
+          <input type="text" placeholder="State"class="w-1/4 px-4 py-2 border border-gray-300 rounded" />
+          <input type="text" placeholder="ZIP" class="w-1/4 px-4 py-2 border border-gray-300 rounded" />
+        </div>
+
+        <select class="w-full px-4 py-2 border border-gray-300 rounded">
+          <option selected>Philippines</option>
+        </select>
+
+        <select class="w-full px-4 py-2 border border-gray-300 rounded">
+          <option selected>BMW E39</option>
+        </select>
+
+        <div class="pt-2">
+          <label class="text-sm font-semibold block">Payment Information</label>
+          <input type="text" placeholder="Card number" class="w-full mt-2 px-4 py-2 border border-gray-300 rounded" />
+          <input type="text" placeholder="MM / YY" class="w-full mt-2 px-4 py-2 border border-gray-300 rounded" />
+        </div>
+
+        <div class="flex justify-between pt-4">
+          <a href="Home.html" class = "bg-white text-black px-6 py-3 rounded-full hover:bg-gray-300 text-sm font-medium">
+            Cancel
+          </a>
+          
+          <button type="submit" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-600">Confirm Payment</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+
+  <footer class="text-center py-6 text-xs text-white">
+    <p>AutoDrive | All Rights Reserved 2025.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - AutoDrive</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-sans">
+
+  <header class="flex items-center justify-between bg-black px-8 py-4 fixed top-0 w-full z-50 border-b-2 border-white-700">
+    <div class="text-2xl font-bold">AutoDrive</div>
+    <nav>
+      <ul class="flex space-x-5 text-sm">
+        <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+        <li><a href="About us.html" class="hover:text-gray-400">About Us</a></li>
+        <li><a href="contact" class="hover:text-gray-400">Contact</a></li>
+        <li><a href="Showcase.html" class="hover:text-gray-400">Showcase</a></li>
+        <li><a href="new cars" class="hover:text-gray-400">New Cars</a></li>
+        <li><a href="Buy.html" class="hover:text-gray-400">Buy</a></li>
+
+      </ul>
+    </nav>
+    
+    <div class="flex items-center space-x-4">
+      <div class="flex">
+        <input type="text" placeholder="Search" class="rounded-l px-2 py-1 text-black" />
+        <button class="bg-white text-black px-3 py-1 rounded-r">Enter</button>
+      </div>
+      <a href="Sign Up.html" class="btn hover:text-gray-400 bg-white text-black px-2 py-2 rounded">Sign Up</a>
+      <a href="Login Page.html" class="btn hover:text-gray-400 bg-white text-black px-2 py-2 rounded">Login</a>
+    </div>
+  </header>
+  
+
+  <main class="flex items-center justify-center h-screen pt-24 px-4">
+  <div class="bg-white text-black w-full max-w-md p-8 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-bold mb-6">Sign in</h2>
+
+    <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 mb-6">
+    <button class="flex items-center justify-center w-full border border-gray-300 py-2 rounded-lg hover:bg-gray-100">
+    <img src="fb icon.jpg" alt="Facebook" class="w-5 h-5 mr-2" />
+          Continue with Facebook
+    </button>
+    
+        <button class="flex items-center justify-center w-full border border-gray-300 py-2 rounded-lg hover:bg-gray-100">
+          <img src="Google.jpg" alt="Google" class="w-5 h-5 mr-2" />
+          Continue with Google
+        </button>
+        
+      </div>
+
+      <div class="flex items-center justify-between mb-4">
+        
+      <hr class="flex-grow border-gray-300"/>
+      <span class="px-3 text-sm text-gray-500">Or continue with email</span>
+      <hr class="flex-grow border-gray-300"/>
+      
+      </div>
+
+    <form>
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium mb-1">Email address</label>
+        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      </div>
+      
+      <div class="mb-6">
+        <label for="password" class="block text-sm font-medium mb-1">Password</label>
+        
+        <div class="relative">
+        <input type="password" id="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+        </div>
+        
+      </div>
+        <button type="submit" class="w-full bg-gray-300 text-black py-2 rounded-lg hover:bg-gray-400 transition">Sign in</button>
+    </form>
+    
+    </div>
+    
+  </main>
+
+  <footer class="absolute bottom-2 left-2 text-xs text-gray-400 flex items-center gap-4">
+    <p>AutoDrive | All Rights Reserved 2025.</p>
+  </footer>
+
+  
+  <script>
+    const form = document.querySelector("form");
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const emailInput    = document.getElementById("email").value.trim();
+      const passwordInput = document.getElementById("password").value;
+  
+      const savedData = JSON.parse(localStorage.getItem("signupData") || "{}");
+  
+      if (
+        emailInput === savedData.email &&
+        passwordInput === savedData.password
+      ) {
+        alert("Login successful!");
+        window.location.href = "index.html"; 
+      } else {
+        alert("Invalid email or password.");
+      }
+    });
+  </script>
+  
+  
+
+  
+  
+</body>
+</html>
